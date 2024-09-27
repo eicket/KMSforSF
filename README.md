@@ -26,19 +26,18 @@ c58 g15 s168 u71 v3 k10 q1 i3 = 329 bits
 
 New for this encoding is :
 
-s160 : the signature
+s168 : the signature
 
-u109 or u79 : unused bits
+u101 or u71 : unused bits
 
 v3 : the version of the superfox payload (values could be : 0 : not authenticated, 1 : scheme 1, 2 : a better scheme, ...)
 
 k10 : key index (1024 values)
 
-
 The signature s168 is produced from the "<date_time>|<key Index>|<CQ message>" string, or similar. 
 As an example : "240817_081230|5|CQ CY9C EM20" could result in a signature "0x02191cf5a121efa04c7976cd4213b0adfc4a556d8b"
 
-The authentication at the hound is done in real time, without the need to do an online lookup.
+The authentication at the hound is done in real time, without the need to do an online internet lookup.
 The fox does not need an internet connection.
 A further design decision can be made if the hound may or may not call the fox before he is heard.
 
@@ -130,9 +129,12 @@ See cpp/verify.cpp
 
 # The KMS - Key Management System
 
+
 ![Alt text](KMS.png)
 
+
 Entries can be added with indexes 0 - 1023.
+
 A private key file can optionally be encrypted with a password. Encryption is done with AES-256.
 
 This java application runs on all recent Java versions and was tested on Java 1.8, 15 and 17.
@@ -158,22 +160,30 @@ java --module-path "{your path to Java FX}\openjfx-15.0.1_windows-x64_bin-sdk\ja
 Code snippets can be extracted from cpp/sign.cpp
 
 For compiling sign.cpp :
+
 g++ sign.cpp miracl/core.a -o sign.exe
 
 For producing a signature :
+
 sign -m "240817_081230|1|CQ N5J EM20" -k privateKeyFile_1000.enc -p 4Hb4B9l2E -s signature1.bin
+
 sign -m "240817_081230|2|CQ CY9C EM20" -k privateKeyFile_9.json -s signature2.bin
+
 
 # Verifying at the fox
 
 Code snippets can be extracted from cpp/verify.cpp
 
 For compiling verify.cpp :
+
 g++ verify.cpp miracl/core.a -o ver.exe
 
 For verifying a signature :
+
 ver.exe -m "240817_081230|1|CQ N5J EM20" -k publicKeyFile.json -s signature1.bin
+
 ver.exe -m "240817_081230|2|CQ CY9C EM20" -k publicKeyFile.json -s signature2.bin
+
 
 Remember, this proposal is for evaluating purposes, and to bring along some fresh ideas !
 
