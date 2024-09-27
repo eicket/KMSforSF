@@ -34,7 +34,7 @@ v3 : the version of the superfox payload (values could be : 0 : not authenticate
 
 k10 : key index (1024 values)
 
-The signature s168 is produced from the "<date_time>|<key Index>|<CQ message>" string, or similar. 
+The signature s168 is produced from the >"<date_time>|<key Index>|<CQ message>"> string, or similar. 
 As an example : "240817_081230|5|CQ CY9C EM20" could result in a signature "0x02191cf5a121efa04c7976cd4213b0adfc4a556d8b"
 
 The authentication at the hound is done in real time, without the need to do an online internet lookup.
