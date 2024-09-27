@@ -26,9 +26,6 @@
 
 #include <stdlib.h>
 
-// for cout !!!
-//#include <iostream>
-
 
 #include "arch.h"
 #include "core.h"
@@ -715,9 +712,6 @@ void core::AES_CBC_IV0_ENCRYPT(octet *k, octet *m, octet *c)
 /* decrypts and returns TRUE if all consistent, else returns FALSE */
 int core::AES_CBC_IV0_DECRYPT(octet *k, octet *c, octet *m)
 {
-  // std::cout << "decrypt : c->len : " << c->len << std::endl;
-
-
     /* padding is removed */
     aes a;
     int i, ipt, opt, ch;
@@ -745,10 +739,8 @@ int core::AES_CBC_IV0_DECRYPT(octet *k, octet *c, octet *m)
             }
             else ch = c->val[ipt++];
         }
-      //   std::cout << "Before decrypt, ipt : " << ipt << "c->len : " << c->len << std::endl;
         AES_decrypt(&a, buff);
         if (fin) break;
-      //   std::cout << "After decrypt" << std::endl;
         for (i = 0; i < 16; i++)
             if (opt < m->max) m->val[opt++] = buff[i];
     }

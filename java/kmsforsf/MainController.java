@@ -1,3 +1,4 @@
+// Erik Icket, ON4PB - 2024
 package kmsforsf;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -106,7 +107,7 @@ public class MainController
         logger.fine("clicked export private keys button");
 
         // check that no more than one key is selected
-        // Convert ObservableList to a regular List (ArrayList) becasue json cannot operate with FXCollections
+        // Convert ObservableList to a regular List (ArrayList) because json cannot operate with FXCollections
         List<ExpeditionInstance> expeditionList = FXCollections.observableArrayList(expeditionObservableList);
         List<ExpeditionInstance> privateKeyList = new ArrayList();
         ExpeditionInstance expeditionInstance = null;
@@ -176,12 +177,6 @@ public class MainController
         // Convert ObservableList to a regular List (ArrayList)
         List<ExpeditionInstance> expeditionList = FXCollections.observableArrayList(expeditionObservableList);
 
-        /*
-        for (int i = 0; i < expeditionList.size(); i++)
-        {
-            ExpeditionInstance expeditionInstance = expeditionList.get(i);
-            if (expeditionInstance.getSelect())
-            {*/
         try
         {
             // Define filter to exclude "select"
@@ -194,14 +189,10 @@ public class MainController
             logger.severe("IOException writing : " + e.getMessage());
             return;
         }
-        // }
-
-        // }
     }
 
     @FXML
-    void clickedAddButton(ActionEvent event
-    )
+    void clickedAddButton(ActionEvent event)
     {
         logger.fine("clicked add button");
 
@@ -319,7 +310,7 @@ public class MainController
             return;
         }
     }
-    
+
     @FXML
     void clickedDeleteButton(ActionEvent event
     )
@@ -523,8 +514,6 @@ public class MainController
 
         timeline = new Timeline();
 
-        // do not put the duration too low, otherwise the VM will crash
-        // was 50 !!!!!!!!!!!!!!!!!!!
         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(50), new EventHandler<ActionEvent>()
         {
             @Override
@@ -539,5 +528,4 @@ public class MainController
 
         timeline.play();
     }
-
 }

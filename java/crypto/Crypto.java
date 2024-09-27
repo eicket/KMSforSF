@@ -1,3 +1,4 @@
+// Erik Icket, ON4PB - 2024
 package crypto;
 
 import java.security.SecureRandom;
@@ -36,7 +37,6 @@ public class Crypto
 
         byte[] S = new byte[BGS];
         byte[] W = new byte[G2S];
-        byte[] SIG = new byte[G1S];
         byte[] RAW = new byte[100];
         byte[] IKM = new byte[32];
 
@@ -53,13 +53,6 @@ public class Crypto
             IKM[i] = (byte) rng.getByte();
         }
 
-        /*
-        int res = org.miracl.core.BN158.BLS.init();
-        if (res != 0)
-        {
-            logger.severe("Failed to initialize");
-        }
-         */
         int res = org.miracl.core.BN158.BLS.KeyPairGenerate(IKM, S, W);
         if (res != 0)
         {
@@ -105,13 +98,7 @@ public class Crypto
         }
 
         byte[] digest = sha256.hash();
-        
-        /*
-        for (int i = 0; i < 32; i++)
-        {
-            System.out.format("%02x", digest[i]);
-        }
-*/        
+
         return digest;
     }
 

@@ -1,3 +1,4 @@
+// Erik Icket, ON4PB - 2024
 package crypto;
 
 import java.security.SecureRandom;
@@ -37,7 +38,7 @@ public class StrongPasswordGenerator
         return shuffleString(password.toString());
     }
 
-    // Method to shuffle the characters in the string
+    // shuffle the characters in the string
     private static String shuffleString(String input)
     {
         char[] chars = input.toCharArray();
