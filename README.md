@@ -9,7 +9,7 @@ Version 3 of the PB scheme, comes with two design options :
 - option 1, where 1024 keypairs are created, and any dx expedition can be attributed a free keypair 
 - option 2, where keypairs are created on request and are attributed to a callsign, as dx expeditions come on air.
 
-This repo implements option 2 (bootstrap with an empty keystore)
+This repo implements option 2 (bootstrap with an empty keystore).
 
 Signing and verifying the CQ message is done with the BN158 curve and BLS signature available from "The MIRACL Core Cryptographic Library" at https://github.com/miracl/core/tree/master
 The order of this elliptic curve is 158 points and has a security level of about 80 bits.
@@ -25,10 +25,15 @@ For a non standard callsign we have 239 bits available for a signature :
 c58 g15 s168 u71 v3 k10 q1 i3 = 329 bits
 
 New for this encoding is :
+
 s160 : the signature
+
 u109 or u79 : unused bits
+
 v3 : the version of the superfox payload (values could be : 0 : not authenticated, 1 : scheme 1, 2 : a better scheme, ...)
+
 k10 : key index (1024 values)
+
 
 The signature s168 is produced from the "<date_time>|<key Index>|<CQ message>" string, or similar. 
 As an example : "240817_081230|5|CQ CY9C EM20" could result in a signature "0x02191cf5a121efa04c7976cd4213b0adfc4a556d8b"
