@@ -1,5 +1,7 @@
 # KMS for SF - Key Management System for WSJT-X Superfox
 
+![Alt text](KMS.png)
+
 A proposal for authenticating a WSJT-X Superfox DX expedition. 
 
 This proposal is referred to as the PB scheme, introduced in Aug 24, when different alternatives were examined to improve the authentication of a WSJT-X Superfox.
@@ -34,10 +36,8 @@ v3 : the version of the superfox payload (values could be : 0 : not authenticate
 
 k10 : key index (1024 values)
 
-The signature s168 is produced from the 
-> "<date_time>|<key Index>|<CQ message>" 
- string, or similar. 
-As an example : "240817_081230|5|CQ CY9C EM20" could result in a signature "0x02191cf5a121efa04c7976cd4213b0adfc4a556d8b"
+The signature s168 is produced from the `<date_time>|<key Index>|<CQ message>` string, or similar. 
+As an example : `240817_081230|5|CQ CY9C EM20` may result in a signature "0x02191cf5a121efa04c7976cd4213b0adfc4a556d8b"
 
 The authentication at the hound is done in real time, without the need to do an online internet lookup.
 The fox does not need an internet connection.
@@ -130,10 +130,6 @@ See cpp/verify.cpp
 #### 6. If a key revocation must be done before the <end_date>, the designated authority deletes the keypair from the private keystore, and re-publishes the public keystore.
 
 # The KMS - Key Management System
-
-
-![Alt text](KMS.png)
-
 
 Entries can be added with indexes 0 - 1023.
 
