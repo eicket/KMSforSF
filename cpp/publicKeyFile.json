@@ -1,0 +1,57 @@
+[ {
+  "index" : 1,
+  "callsign" : "A",
+  "expedition" : "A",
+  "startDate" : "2024-09-03",
+  "endDate" : "2024-09-26",
+  "publicKey" : "AxW3cZ4eWktlQ9qw7sE1yMlBVFOhBrv6U2s2wyM+++tAEcLn0mtryHs=",
+  "password" : "^i7?hNyG<^"
+}, {
+  "index" : 4,
+  "callsign" : "F",
+  "expedition" : "F",
+  "startDate" : "2024-09-10",
+  "endDate" : "2024-09-20",
+  "publicKey" : "AhMPrZIPcutmsw7Vtp3M2Az+94CcEdAaLoDYsON63Rcq67VkyeEPl08=",
+  "password" : "lMdX9WB1*_"
+}, {
+  "index" : 7,
+  "callsign" : "A",
+  "expedition" : "A",
+  "startDate" : "2024-09-02",
+  "endDate" : "2024-09-12",
+  "publicKey" : "AxmRPFaRazgCXdk1cVIEpvcfkVfDHn2Siid1T3Q9jN+KdP6p62tIJUo=",
+  "password" : "+$&Ys>l8?S"
+}, {
+  "index" : 8,
+  "callsign" : "F",
+  "expedition" : "F",
+  "startDate" : "2024-09-09",
+  "endDate" : "2024-09-20",
+  "publicKey" : "Aw5on6VKtMvB0iY/ITvMDrTD7pIBDHdEGZziZHxKmjq1QFHzeejhiqo=",
+  "password" : "7y70o<*FqM"
+}, {
+  "index" : 9,
+  "callsign" : "F",
+  "expedition" : "F",
+  "startDate" : "2024-09-09",
+  "endDate" : "2024-09-20",
+  "publicKey" : "Aw/aqyM44BXD97kw2T6rTgo21Cb1H/+7knCenm/JY0JIdGCly8R8V98=",
+  "password" : ""
+}, {
+  "index" : 33,
+  "callsign" : "X",
+  "expedition" : "X",
+  "startDate" : "2024-08-26",
+  "endDate" : "2024-09-26",
+  "publicKey" : "Agikr2n5VxChHW7QBkJ4z1hHRFlAD7GeQSTZzoYBkJZsppB+uSp+T2c=",
+  "password" : "C8SA3k0vl"
+}, {
+  "index" : 1000,
+  "callsign" : "X",
+  "expedition" : "Erik",
+  "startDate" : "2024-09-02",
+  "endDate" : "2024-09-28",
+  "publicKey" : "AxdXNw9YutYOAMIFuHPTvsDmYQ9BAffOhWYm3a4d+3f60e+/K/Qd2mc=",
+  "password" : "xpru8HQsB"
+} ]
