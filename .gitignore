@@ -3,4 +3,5 @@
 /nbproject/
 /scripts/
 /test/
-/manifest.mf
+manifest.mf
+build.xml
