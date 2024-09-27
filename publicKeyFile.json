@@ -4,22 +4,19 @@
   "expedition" : "Palmyra and Jarvis Islands DX expedition",
   "startDate" : "2024-08-07",
   "endDate" : "2024-08-20",
-  "publicKey" : "AiKZwAUzudL7xNgBeBx3AIeWNAVSAcpyGl2yB/JgsidtV+cXjsOPLoY=",
-  "password" : "4Hb4B9l2E"
+  "publicKey" : "AiKZwAUzudL7xNgBeBx3AIeWNAVSAcpyGl2yB/JgsidtV+cXjsOPLoY="
 }, {
   "index" : 2,
   "callsign" : "CY9C",
   "expedition" : "Saint Paul Island DX expedition",
   "startDate" : "2024-08-25",
   "endDate" : "2024-09-05",
-  "publicKey" : "AxBkb6kKvPgMImp1PdnbWIGTZqUuHb1lAQczlNm8Cws5lCqjhpt//Cg=",
-  "password" : ""
+  "publicKey" : "AxBkb6kKvPgMImp1PdnbWIGTZqUuHb1lAQczlNm8Cws5lCqjhpt//Cg="
 }, {
   "index" : 1000,
   "callsign" : "KH8T",
   "expedition" : "American Samoa",
   "startDate" : "2024-08-30",
   "endDate" : "2024-09-16",
-  "publicKey" : "AgFQzXgx9l5BRP3YSBhQzjJSKkwHHejw9aIlrIBGNsHq9Du5ngTs0Mk=",
-  "password" : "edWw6F4IJ"
+  "publicKey" : "AgFQzXgx9l5BRP3YSBhQzjJSKkwHHejw9aIlrIBGNsHq9Du5ngTs0Mk="
 } ]
