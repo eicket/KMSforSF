@@ -181,8 +181,7 @@ public class MainController
         {
             // Define filter to exclude "select"
             SimpleFilterProvider filters = new SimpleFilterProvider().addFilter("userFilter", SimpleBeanPropertyFilter.serializeAllExcept("select", "privateKey", "password"));
-            objectMapper.writer(filters).writeValue(publicKeystoreFile, expeditionList);
-            // objectMapper.writeValue(publicKeystoreFile, expeditionList);
+            objectMapper.writer(filters).writeValue(publicKeystoreFile, expeditionList);           
         }
         catch (IOException e)
         {
