@@ -42,14 +42,18 @@ The authentication at the hound is done in real time, without the need to do an 
 The fox does not need an internet connection.
 A further design decision can be made if the hound may or may not call the fox before he is heard.
 
-## Event sequence 
+## Sequence of events 
 
-1. At the request of a DX expedition, the designated authority :
+### 1. At the request of a DX expedition, the designated authority :
 
-1.1 creates a private key file with the requesting callsign, a new keypair, a free key index and the validity period
-1.2 optionally, encrypts the private key file with a strong password
-1.3 sends the encrypted file plus password to the DX expedition manager
-1.4 adds the .json entry to the private keystore. Example of a keystore.json with 3 DX expeditions :
+#### 1.1 creates a private key file with the requesting callsign, a new keypair, a free key index and the validity period
+
+#### 1.2 optionally, encrypts the private key file with a strong password
+
+#### 1.3 sends the encrypted file plus password to the DX expedition manager
+
+#### 1.4 adds the .json entry to the private keystore. Example of a keystore.json with 3 DX expeditions :
+
 [ {
   "index" : 1,
   "callsign" : "N5J",
