@@ -45,9 +45,9 @@ A further design decision can be made if the hound may or may not call the fox b
 
 # Sequence of events 
 
-#### 1. At the request of a DX expedition, the designated authority :
+1. At the request of a DX expedition, the designated authority :
 
-##### 1.1 creates a private key file with the requesting callsign, a new keypair, a free key index and the validity period
+1.1 creates a private key file with the requesting callsign, a new keypair, a free key index and the validity period
 
 ##### 1.2 optionally, encrypts the private key file with a strong password
 
