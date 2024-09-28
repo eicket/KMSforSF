@@ -49,11 +49,11 @@ A further design decision can be made if the hound may or may not call the fox b
 
 1.1 creates a private key file with the requesting callsign, a new keypair, a free key index and the validity period
 
-##### 1.2 optionally, encrypts the private key file with a strong password
+1.2 optionally, encrypts the private key file with a strong password
 
-##### 1.3 sends the encrypted file plus password to the DX expedition manager
+1.3 sends the encrypted file plus password to the DX expedition manager
 
-##### 1.4 adds the .json entry to the private keystore. 
+1.4 adds the .json entry to the private keystore. 
 
 Example of a keystore.json with 3 DX expeditions :
 ```json
@@ -86,7 +86,7 @@ Example of a keystore.json with 3 DX expeditions :
   "password" : "edWw6F4IJ"
 } ]
 ```	
-##### 1.5 appends a new .json entry to the public keystore. 
+1.5 appends a new .json entry to the public keystore. 
 
 Example of a publicKeyFile.json with 3 DX expeditions :	
 ```json
@@ -113,21 +113,21 @@ Example of a publicKeyFile.json with 3 DX expeditions :
   "publicKey" : "AgFQzXgx9l5BRP3YSBhQzjJSKkwHHejw9aIlrIBGNsHq9Du5ngTs0Mk="
 } ]	
 ```
-##### 1.6 uploads the updated public keystore to the wsjtx website.
+1.6 uploads the updated public keystore to the wsjtx website.
 		
-#### 2. At the fox side, the encrypted private key file is optionally decrypted with the strong password, and stored together with its contents.
+2. At the fox side, the encrypted private key file is optionally decrypted with the strong password, and stored together with its contents.
 
-#### 3. When the fox comes on air, he beacons the authenticated CQ message, as per the superfox payload description, at a configurable interval.
+3. When the fox comes on air, he beacons the authenticated CQ message, as per the superfox payload description, at a configurable interval.
 
 See cpp/sign.cpp for implementation details.
 
-#### 4. RRR messages are not authenticated but the key index is included in the superfox payload, so that another genuine wsjtx fox / hound cannot interfere.
+4. RRR messages are not authenticated but the key index is included in the superfox payload, so that another genuine wsjtx fox / hound cannot interfere.
 
-#### 5. The hound downloads, at his convenience, the latest version of the public keystore. As from now on, CQ messages are authenticated in real time.
+5. The hound downloads, at his convenience, the latest version of the public keystore. As from now on, CQ messages are authenticated in real time.
 
 See cpp/verify.cpp
 
-#### 6. If a key revocation must be done before the <end_date>, the designated authority deletes the keypair from the private keystore, and re-publishes the public keystore.
+6. If a key revocation must be done before the <end_date>, the designated authority deletes the keypair from the private keystore, and re-publishes the public keystore.
 
 # The KMS - Key Management System
 
