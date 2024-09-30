@@ -153,7 +153,7 @@ as well as charm-glisten-6.0.6.jar
 The Java app can be started up as follows :
 java --module-path "{your path to Java FX}\openjfx-15.0.1_windows-x64_bin-sdk\javafx-sdk-15.0.1\lib" --add-modules javafx.controls,javafx.fxml -Djava.util.logging.config.file=console_logging.properties -jar "dist\KMSforSF.jar"
 
-# Signing at the hound
+# Signing at the fox
 
 Code snippets can be extracted from cpp/sign.cpp
 
@@ -168,7 +168,7 @@ sign -m "240817_081230|1|CQ N5J EM20" -k privateKeyFile_1000.enc -p 4Hb4B9l2E -s
 sign -m "240817_081230|2|CQ CY9C EM20" -k privateKeyFile_9.json -s signature2.bin
 
 
-# Verifying at the fox
+# Verifying at the hound
 
 Code snippets can be extracted from cpp/verify.cpp
 
